@@ -1,7 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
-  /*background-color: #f0f8ff;*/
-  padding: 20px;
+    background-image: url('https://cdn.pixabay.com/photo/2016/05/06/12/51/piglet-1377824_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+">
+
 }
 
 .form-container {
