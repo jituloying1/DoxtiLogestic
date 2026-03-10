@@ -6,6 +6,7 @@
     const formData = {
       fullName: document.getElementById('fullName').value,
       dob: document.getElementById('dob').value,
+      doa: document.getElementById('doa').value,
       gender: document.getElementById('gender').value,
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
@@ -31,3 +32,4 @@
       }
     });
   });
+
