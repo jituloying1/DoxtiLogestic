@@ -66,6 +66,11 @@
                 <label for="full_Name"> Name Of The Students :</label>
                 <input type="text" id="fullName"name="full_Name" required>
             </div>
+              <div class="input-group">
+                <label for="full_Name_f"> Enter Father Name  :</label>
+                <input type="text" id="fullName_f"name="full_Name_f" required>
+            </div>
+
 
             <div class="input-group">
                 <label for="dob">DATE OF Birth :</label>
@@ -128,6 +133,8 @@
                 <label for="address"> ENTER YOUR FULL ADRESS</label>
                 <textarea id="address" name="address" required></textarea>
             </div>
+
+      
 
             <!-- File Uploads -->
             <div class="input-group">
@@ -201,6 +208,7 @@
 
         // Collect form data
         const fullName = document.getElementById('fullName').value;
+        const fullName = document.getElementById('fullName_f').value;
         const dob = document.getElementById('dob').value;
         const doa = document.getElementById('doa').value;
 
@@ -213,6 +221,7 @@
         // Prepare table content for preview
         let previewContent = `
             <tr><td><strong>Full Name:</strong></td><td>${fullName}</td></tr>
+            <tr><td><strong>Full Name:</strong></td><td>${fullName_f}</td></tr>
             <tr><td><strong>Date of Birth:</strong></td><td>${dob}</td></tr>
             <tr><td><strong>Date of applying:</strong></td><td>${doa}</td></tr>
             <tr><td><strong>Gender:</strong></td><td>${gender}</td></tr>
@@ -311,6 +320,7 @@
 
 </body>
 </html>
+
 
 
 
