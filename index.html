@@ -148,6 +148,13 @@
                 <input type="file" id="admit" name="admit" accept="image/*" required>
             </div>
 
+             <div class="input-group"> 
+                <label for="admite"> Admit card / birth certificate </label>
+                <input type="file" id="admite" name="admite" accept="image/*" required>
+            </div>
+
+            
+
 
             <!-- Preview and Submit Button -->
             <div class="submit-btn">
@@ -230,6 +237,7 @@
         const photo = document.getElementById('photo').files[0];
         const signature = document.getElementById('signature').files[0];
         const admit = document.getElementById('admit').files[0];
+        const admite = document.getElementById('admite').files[0];
 
         if (photo) {
             previewContent += `
@@ -246,6 +254,12 @@
                 <tr><td><strong>Admit:</strong></td><td><img src="${URL.createObjectURL(admit)}" alt="Admit Preview" width="100" height="100"></td></tr>
             `;
         }
+        if (admite) {
+            previewContent += `
+                <tr><td><strong>Admit:</strong></td><td><img src="${URL.createObjectURL(admite)}" alt="Admit Preview" width="100" height="100"></td></tr>
+            `;
+        }
+
 
         // Populate the table with the preview content
         document.getElementById('preview-table-content').innerHTML = previewContent;
@@ -269,11 +283,13 @@
         const photoFile = document.getElementById('photo').files[0];
         const signatureFile = document.getElementById('signature').files[0];
         const admitFile = document.getElementById('admit').files[0];
+         const admitFile = document.getElementById('admite').files[0];
     
         // Add base64 versions to FormData
         formData.append("photo", await toBase64(photoFile));
         formData.append("signature", await toBase64(signatureFile));
         formData.append("admit", await toBase64(admitFile));
+        formData.append("admite", await toBase64(admiteFile));
     
         // Submit to Google Apps Script
         fetch('https://script.google.com/macros/s/AKfycbwFJ6jm0KZJo9isrPDoiQ9AxkhJ6s96L1fUaqSyPMGitHc3EGPxcSiu89ra1D2LsEYxHw/exec', {
@@ -315,6 +331,7 @@
 
 </body>
 </html>
+
 
 
 
