@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ABC SCHOLL MENAGMENT </title>
+    <title> WELCOME  TO ABC COLLAGE   </title>
     <link rel="shortcut icon" href="C:\Users\jitul\Desktop\scholl\new\school.png"/>
     <link rel="stylesheet" href="main.css">
     <style>
@@ -53,31 +55,24 @@
 </head>
 <body >
     <div class="main-container">
-        <h1>WELCOME TO  ABC  SCHOLL </h1>
-        <p> THANK YOU FOR SELECT US </p>
+        <h1>Welcome To Abc collage </h1>
+        <p>You are going to submit your data !</p>
     </div>
 
     <!-- Student Admission Form -->
     <div class="form-container">
-        <h2> ABC SCHOOL MANAGMENT SYSTEM ADMISSION FAGE </h2>  
+        <h2> FILUP YOUR ALL DATA </h2>  
         <form id="admissionForm" >
 
             <div class="input-group">
-                <label for="full_Name"> Name Of The Students :</label>
+                <label for="full_Name"> NAME OF THE STUDENTS :</label>
                 <input type="text" id="fullName"name="full_Name" required>
             </div>
 
-
             <div class="input-group">
-                <label for="dob">DATE OF Birth :</label>
+                <label for="dob">DATE OF BIRTH :</label>
                 <input type="date" id="dob" name="Date" required>
             </div>
-
-            <div class="input-group">
-                <label for="doa"> Date of applying  :</label>
-                <input type="date" id="doa" name="Datee" required>
-            </div>
-            
 
             <div class="input-group">
                 <label for="gender">Gender:</label>
@@ -90,7 +85,7 @@
             </div>
 
             <div class="input-group">
-                <label for="email"> Your mail id :</label>
+                <label for="email">YOUR MAIL ID  :</label>
                 <input type="email" id="email" name="email" required>
             </div>
 
@@ -100,53 +95,52 @@
             </div>
 
             <div class="input-group">
-                <label for="class"> SELECT YOUR NEW CLASS :</label>
+                <label for="class"> APPLYING FOR :</label>
                 <select id="class" name="class" required>
                     <option value="">--Select Class--</option>
-                    <option value="Nursery">Nursery/option>
-                    <option value="LKG">LKG  </option>
+                    <option value="Nursery">Nursery</option>
+                    <option value="LKG">LKG </option>
                     <option value="UKG">UKG </option>
                     <option value="1"> 1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                    <option value="4"> 4</option>
+                    <option value="4">4</option>
                     <option value="5">5</option>
                     <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8th</option>
+                    <option value="7">SEVEN</option>
+                    <option value="8">EIGHT</option>
                     <option value="9">9</option>
-                    <option value="10">10th</option>
+                    <option value="10">10TH</option>
+                    <option value="MODELING"> MODELING</option>
                     <option value="NCC">NCC</option>
-                    <option value="SPORTS">SPORTS</option>
-                    <option value="NSS">NSS</option>
-                    <option value="MODEL">MODEL</option>
                     <option value="IT ">IT </option>
-                    <option value="OTHER">OTHER</option>
+                    <option value="SPORTS">SPORTS</option>
+                    <option value="CALCTURAL">CALCTURAL</option>
+                    <option value="DROWING">DROWING</option>
                 </select>
             </div>
 
             <div class="input-group">
-                <label for="address"> ENTER YOUR FULL ADRESS</label>
+                <label for="address"> FULL DESCRIPTION ABOUT  YOU </label>
                 <textarea id="address" name="address" required></textarea>
             </div>
 
-      
-
             <!-- File Uploads -->
             <div class="input-group">
-                <label for="photo">PASPORT SIZE PHOTO  :</label>
+                <label for="photo">PHOTO OF THE STUDENTS :</label>
                 <input type="file" id="photo" name="photo" accept="image/*" required>
             </div>
 
             <div class="input-group"> 
-                <label for="signature">SIGNATURE</label>
+                <label for="signature">SIGNATURE OF THE STUDENTS :</label>
                 <input type="file" id="signature" name="signature" accept="image/*" required>
             </div>
 
             <div class="input-group"> 
-                <label for="admit"> Admit card / birth certificate </label>
+                <label for="admit"> LAST ADMIT /BIRTH CERTIFICATE </label>
                 <input type="file" id="admit" name="admit" accept="image/*" required>
             </div>
+
 
             <!-- Preview and Submit Button -->
             <div class="submit-btn">
@@ -204,8 +198,6 @@
         // Collect form data
         const fullName = document.getElementById('fullName').value;
         const dob = document.getElementById('dob').value;
-        const doa = document.getElementById('doa').value;
-
         const gender = document.getElementById('gender').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
@@ -215,9 +207,7 @@
         // Prepare table content for preview
         let previewContent = `
             <tr><td><strong>Full Name:</strong></td><td>${fullName}</td></tr>
-          
             <tr><td><strong>Date of Birth:</strong></td><td>${dob}</td></tr>
-            <tr><td><strong>Date of applying:</strong></td><td>${doa}</td></tr>
             <tr><td><strong>Gender:</strong></td><td>${gender}</td></tr>
             <tr><td><strong>Email Address:</strong></td><td>${email}</td></tr>
             <tr><td><strong>Phone Number:</strong></td><td>${phone}</td></tr>
@@ -229,7 +219,6 @@
         const photo = document.getElementById('photo').files[0];
         const signature = document.getElementById('signature').files[0];
         const admit = document.getElementById('admit').files[0];
-       
 
         if (photo) {
             previewContent += `
@@ -246,7 +235,6 @@
                 <tr><td><strong>Admit:</strong></td><td><img src="${URL.createObjectURL(admit)}" alt="Admit Preview" width="100" height="100"></td></tr>
             `;
         }
-      
 
         // Populate the table with the preview content
         document.getElementById('preview-table-content').innerHTML = previewContent;
@@ -270,13 +258,11 @@
         const photoFile = document.getElementById('photo').files[0];
         const signatureFile = document.getElementById('signature').files[0];
         const admitFile = document.getElementById('admit').files[0];
-
     
         // Add base64 versions to FormData
         formData.append("photo", await toBase64(photoFile));
         formData.append("signature", await toBase64(signatureFile));
         formData.append("admit", await toBase64(admitFile));
-       
     
         // Submit to Google Apps Script
         fetch('https://script.google.com/macros/s/AKfycbwFJ6jm0KZJo9isrPDoiQ9AxkhJ6s96L1fUaqSyPMGitHc3EGPxcSiu89ra1D2LsEYxHw/exec', {
@@ -318,23 +304,5 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
