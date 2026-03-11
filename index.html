@@ -270,13 +270,13 @@
         const photoFile = document.getElementById('photo').files[0];
         const signatureFile = document.getElementById('signature').files[0];
         const admitFile = document.getElementById('admit').files[0];
-        const admitFile = document.getElementById('admite').files[0];
+
     
         // Add base64 versions to FormData
         formData.append("photo", await toBase64(photoFile));
         formData.append("signature", await toBase64(signatureFile));
         formData.append("admit", await toBase64(admitFile));
-        formData.append("admite", await toBase64(admiteFile));
+       
     
         // Submit to Google Apps Script
         fetch('https://script.google.com/macros/s/AKfycbwFJ6jm0KZJo9isrPDoiQ9AxkhJ6s96L1fUaqSyPMGitHc3EGPxcSiu89ra1D2LsEYxHw/exec', {
@@ -318,6 +318,7 @@
 
 </body>
 </html>
+
 
 
 
