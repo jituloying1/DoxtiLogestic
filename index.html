@@ -53,7 +53,7 @@
 </head>
 <body >
     <div class="main-container">
-        <h1>WELCOME TO  ABC COLLAGE </h1>
+        <h1>WELCOME TO  ABC  SCHOLL </h1>
         <p> THANK YOU FOR SELECT US </p>
     </div>
 
@@ -67,8 +67,8 @@
                 <input type="text" id="fullName"name="full_Name" required>
             </div>
               <div class="input-group">
-                <label for="full_Name_f"> Enter Father Name  :</label>
-                <input type="text" id="full_Name_f"name="full_Name_f" required>
+                <label for="full_Namef"> Enter Father Name  :</label>
+                <input type="text" id="full_Namef"name="full_Namef" required>
             </div>
 
 
@@ -208,7 +208,7 @@
 
         // Collect form data
         const fullName = document.getElementById('fullName').value;
-        const full_Name_f = document.getElementById('full_Name_f').value;
+        const full_NameF = document.getElementById('full_NameF').value;
         const dob = document.getElementById('dob').value;
         const doa = document.getElementById('doa').value;
 
@@ -221,7 +221,7 @@
         // Prepare table content for preview
         let previewContent = `
             <tr><td><strong>Full Name:</strong></td><td>${fullName}</td></tr>
-            <tr><td><strong>full_Name_f:</strong></td><td>${full_Name_f}</td></tr>
+            <tr><td><strong>full_Namef:</strong></td><td>${full_Namef}</td></tr>
             <tr><td><strong>Date of Birth:</strong></td><td>${dob}</td></tr>
             <tr><td><strong>Date of applying:</strong></td><td>${doa}</td></tr>
             <tr><td><strong>Gender:</strong></td><td>${gender}</td></tr>
@@ -320,6 +320,7 @@
 
 </body>
 </html>
+
 
 
 
