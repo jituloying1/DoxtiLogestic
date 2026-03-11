@@ -15,7 +15,8 @@
       address: document.getElementById('address').value,
       photo: document.getElementById('photo').value,
       signature: document.getElementById('signature').value,
-      adhar: document.getElementById('adhar').value
+      adhar: document.getElementById('adhar').value,
+      adhar: document.getElementById('admite').value
     };
 
     fetch('https://script.google.com/macros/s/AKfycbzKcHa7wx_oRFbSRNxS7oJt-fk7Afe-OAknhiJyoGc7gDQ_bVfBQGFNOw3mvcqnsyNycA/exec', {
@@ -33,6 +34,7 @@
       }
     });
   });
+
 
 
 
