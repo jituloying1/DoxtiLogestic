@@ -26,13 +26,14 @@
       }
     }).then(response => {
       if (response.ok) {
-        alert("Form submitted successfully!");
+        alert("Form submitted successfully! Under 2 days we will contact you ");
         form.reset();
       } else {
         alert("Submission failed.");
       }
     });
   });
+
 
 
 
