@@ -312,10 +312,22 @@
         window.location.href = "login.html"; 
     }
 </script>
+<script>
+function goPage(event, link){
+    event.preventDefault();
+    document.body.classList.add("fade-out");
 
+    setTimeout(()=>{
+        window.location = link.href;
+    },500);
+}
+</script>
       
 </body>
-
+<!-- TERMS -->
+  <a href="" download>
+    <button class="small-btn">Terms & Condition</button>
+  </a>
 </body>
 </html>
 
